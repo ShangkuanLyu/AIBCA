@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Partner } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 interface PartnerTileProps {
   partner: Partner;
@@ -15,7 +16,7 @@ interface PartnerTileProps {
 export function PartnerTile({ partner, className }: PartnerTileProps) {
   const inner = partner.logo ? (
     <Image
-      src={partner.logo}
+      src={assetPath(partner.logo)}
       alt={partner.name}
       width={140}
       height={48}

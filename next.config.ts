@@ -8,11 +8,15 @@ import type { NextConfig } from "next";
  * 正式上线到自有域名（如 Vercel / 自建服务器）时无需该环境变量。
  */
 const isGithubPages = process.env.GITHUB_PAGES === "true";
+const basePath = isGithubPages ? "/AIBCA" : "";
 
 const nextConfig: NextConfig = {
   output: isGithubPages ? "export" : undefined,
-  basePath: isGithubPages ? "/AIBCA" : undefined,
+  basePath: basePath || undefined,
   trailingSlash: isGithubPages,
+  // next/image 的 src 不会自动套用 basePath，需通过 lib/asset.ts 的
+  // assetPath() 手动拼接，故把前缀暴露给客户端代码。
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
   images: {
     unoptimized: isGithubPages,
     // 占位图来自 Unsplash。正式上线时替换为自有图库/CMS 资源后，

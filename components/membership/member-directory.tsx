@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Badge, type BadgeTone } from "@/components/ui/badge";
+import { assetPath } from "@/lib/asset";
 import type { Member, MemberTier } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -62,8 +64,20 @@ export function MemberDirectory({ members, industries }: MemberDirectoryProps) {
           return (
             <article
               key={member.id}
-              className="flex h-full flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/60"
+              className="group flex h-full flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/60"
             >
+              {/* 会员 Logo（暂缺时不占位，保持卡片整洁） */}
+              {member.logo && (
+                <div className="mb-5 flex h-14 items-center border-b border-ink/10 pb-5">
+                  <Image
+                    src={assetPath(member.logo)}
+                    alt={`${member.name} Logo`}
+                    width={200}
+                    height={56}
+                    className="max-h-9 w-auto object-contain object-left grayscale transition-all duration-300 group-hover:grayscale-0"
+                  />
+                </div>
+              )}
               <div className="flex flex-wrap items-center gap-2">
                 <Badge tone="pine">{member.industry}</Badge>
                 <Badge tone={tier.tone}>{tier.label}</Badge>

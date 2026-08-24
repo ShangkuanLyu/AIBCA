@@ -5,6 +5,7 @@ import { Badge, type BadgeTone } from "@/components/ui/badge";
 import { NEWS_CATEGORIES } from "@/lib/labels";
 import type { NewsArticle, NewsCategory } from "@/lib/types";
 import { cn, formatDate } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 /** 分类 → 颜色（暗红仅用于公告与文化类栏目） */
 export const NEWS_TONES: Record<NewsCategory, BadgeTone> = {
@@ -46,7 +47,7 @@ export function NewsCard({
         <Link href={href} className="flex gap-4 py-4">
           <div className="relative h-20 w-28 shrink-0 overflow-hidden">
             <Image
-              src={article.coverImage}
+              src={assetPath(article.coverImage)}
               alt={article.coverAlt}
               fill
               sizes="112px"
@@ -80,7 +81,7 @@ export function NewsCard({
         <Link href={href} className="flex flex-col gap-0 sm:flex-row">
           <div className="relative aspect-[3/2] w-full shrink-0 overflow-hidden sm:w-64 md:w-72">
             <Image
-              src={article.coverImage}
+              src={assetPath(article.coverImage)}
               alt={article.coverAlt}
               fill
               sizes="(min-width: 640px) 288px, 100vw"
@@ -116,7 +117,7 @@ export function NewsCard({
         <Link href={href} className="block">
           <div className="relative aspect-[16/10] overflow-hidden">
             <Image
-              src={article.coverImage}
+              src={assetPath(article.coverImage)}
               alt={article.coverAlt}
               fill
               priority={priority}
@@ -155,7 +156,7 @@ export function NewsCard({
       <Link href={href} className="flex h-full flex-col">
         <div className="relative aspect-[3/2] overflow-hidden">
           <Image
-            src={article.coverImage}
+            src={assetPath(article.coverImage)}
             alt={article.coverAlt}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

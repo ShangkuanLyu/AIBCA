@@ -7,6 +7,7 @@ import { EventInfoPanel } from "@/components/events/event-info-panel";
 import { RegistrationPanel } from "@/components/events/registration-panel";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ContentGallery } from "@/components/ui/content-gallery";
 import { ImageFrame } from "@/components/ui/image-frame";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
@@ -113,6 +114,13 @@ export default async function EventDetailPage({ params }: EventPageProps) {
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
+          )}
+
+          {/* 往期活动现场图集 */}
+          {event.gallery && event.gallery.length > 0 && (
+            <Reveal className="max-w-4xl">
+              <ContentGallery images={event.gallery} title="现场图集" />
+            </Reveal>
           )}
 
           {/* 报名区块 */}

@@ -50,6 +50,27 @@ docs/DESIGN-GUIDE.md # 全站设计规范
 - 站点名称 / 联系方式 / 社交链接在 `lib/site.ts`
 - 上线前需替换的内容均以 `TODO(上线前)` 注释或 `[待填写]` 标注
 
+### 内容来源
+
+数据文件中的条目分两类，文件头注释均有逐条标注：
+
+- **老站迁移的真实内容**：5 篇新闻、3 场历史活动、4 家会员企业，均来自原
+  aibca.com.au，配 157 张商会自有照片（`public/images/`）。老站「工作项目」
+  栏目的 14 篇为建站占位的英文 lorem ipsum，「人员变动」页为与商会无关的
+  转载内容，均未迁入。
+- **示例内容**：其余条目为占位数据，上线前替换，清单见 `docs/LAUNCH-CHECKLIST.md`。
+
+### 图片路径约定
+
+`next/image` 的 `src` 不会自动套用 `basePath`（部署到 GitHub Pages 等子路径时），
+因此**所有本站图片必须经 `lib/asset.ts` 的 `assetPath()` 包装**：
+
+```tsx
+<Image src={assetPath(article.coverImage)} ... />
+```
+
+数据文件里只写 `/images/news/xxx.jpg` 这样的干净路径，前缀由组件负责。
+
 ## 技术要点
 
 - Next/Image + Unsplash 占位图（`next.config.ts` 中配置了 remotePatterns）

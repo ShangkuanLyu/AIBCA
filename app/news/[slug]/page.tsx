@@ -9,6 +9,7 @@ import { ShareButtons } from "@/components/news/share-buttons";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
 import { PageHeader } from "@/components/ui/page-header";
+import { ContentGallery } from "@/components/ui/content-gallery";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
@@ -20,6 +21,7 @@ import {
 import { NEWS_CATEGORIES } from "@/lib/labels";
 import { site } from "@/lib/site";
 import { formatDate } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 interface NewsDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -107,7 +109,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               <div className="relative aspect-[16/9] overflow-hidden">
                 {/* TODO(上线前)：替换为正式新闻照片（当前为 Unsplash 占位图，来自 data/news.ts） */}
                 <Image
-                  src={article.coverImage}
+                  src={assetPath(article.coverImage)}
                   alt={article.coverAlt}
                   fill
                   priority
@@ -130,6 +132,13 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
+
+          {/* 活动图集（现场照片） */}
+          {article.gallery && article.gallery.length > 0 && (
+            <Reveal className="mx-auto max-w-4xl">
+              <ContentGallery images={article.gallery} />
+            </Reveal>
+          )}
 
           {/* 分享 */}
           <div className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-between gap-4 border-y border-ink/10 py-5">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 interface ImageFrameProps {
   src: string;
@@ -38,7 +39,7 @@ export function ImageFrame({
         />
         <div className={cn("relative overflow-hidden", aspect)}>
           <Image
-            src={src}
+            src={assetPath(src)}
             alt={alt}
             fill
             sizes={sizes}

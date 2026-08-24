@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { EVENT_CATEGORIES, EVENT_STATUS } from "@/lib/labels";
 import type { ChamberEvent } from "@/lib/types";
 import { cn, formatDate } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 interface PastEventCardProps {
   event: ChamberEvent;
@@ -25,7 +26,7 @@ export function PastEventCard({ event, className }: PastEventCardProps) {
       <Link href={`/events/${event.slug}`} className="flex h-full flex-col sm:flex-row">
         <div className="relative aspect-[16/9] shrink-0 overflow-hidden sm:aspect-[4/3] sm:w-60 lg:aspect-[16/10] lg:w-80">
           <Image
-            src={event.coverImage}
+            src={assetPath(event.coverImage)}
             alt={event.coverAlt}
             fill
             sizes="(min-width: 1024px) 320px, (min-width: 640px) 240px, 100vw"

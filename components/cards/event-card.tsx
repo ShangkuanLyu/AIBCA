@@ -5,6 +5,7 @@ import { Badge, type BadgeTone } from "@/components/ui/badge";
 import { EVENT_CATEGORIES, EVENT_STATUS } from "@/lib/labels";
 import type { ChamberEvent, EventStatus } from "@/lib/types";
 import { cn, formatDate } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 /** 活动状态 → 颜色 */
 export const STATUS_TONES: Record<EventStatus, BadgeTone> = {
@@ -34,7 +35,7 @@ export function EventCard({ event, className }: EventCardProps) {
       <Link href={`/events/${event.slug}`} className="flex h-full flex-col">
         <div className="relative aspect-[16/9] overflow-hidden">
           <Image
-            src={event.coverImage}
+            src={assetPath(event.coverImage)}
             alt={event.coverAlt}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

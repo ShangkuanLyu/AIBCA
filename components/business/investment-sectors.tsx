@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { assetPath } from "@/lib/asset";
 
 /** 内蒙古重点产业（示例文案，接入 CMS 后可由后台内容替换） */
 const SECTORS = [
@@ -64,7 +65,7 @@ export function InvestmentSectors() {
               <article className="group h-full border border-ink/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-gold/60">
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
-                    src={sector.image}
+                    src={assetPath(sector.image)}
                     alt={sector.alt}
                     fill
                     sizes="(min-width: 640px) 50vw, 100vw"

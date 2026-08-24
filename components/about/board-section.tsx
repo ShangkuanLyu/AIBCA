@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { boardMembers } from "@/data/board";
 import type { BoardMember } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/asset";
 
 /** 会长层职务（单独一排大卡展示） */
 const LEADERSHIP_ROLES = ["名誉会长", "会长", "执行会长"];
@@ -41,7 +42,7 @@ function LeaderCard({ member }: { member: BoardMember }) {
         <div className="relative aspect-[3/4] overflow-hidden">
           {/* TODO(上线前)：替换为成员正式肖像照 */}
           <Image
-            src={member.photo}
+            src={assetPath(member.photo)}
             alt={`${member.name}（${member.role}）肖像照`}
             fill
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

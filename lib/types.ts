@@ -25,6 +25,15 @@ export interface NewsAttachment {
   href: string;
 }
 
+/** 正文配图 / 活动图集中的单张图片 */
+export interface ContentImage {
+  /** 图片地址（本站 /images/... 或 CDN 绝对地址） */
+  src: string;
+  alt: string;
+  /** 图片说明，显示在图片下方 */
+  caption?: string;
+}
+
 export interface NewsArticle {
   slug: string;
   category: NewsCategory;
@@ -47,6 +56,8 @@ export interface NewsArticle {
   pinned?: boolean;
   /** 正文段落（简化的富文本，未来由 CMS 富文本替换） */
   body: string[];
+  /** 活动图集：正文之后以网格形式展示的现场照片 */
+  gallery?: ContentImage[];
   attachments?: NewsAttachment[];
   relatedSlugs?: string[];
 }
@@ -87,6 +98,8 @@ export interface ChamberEvent {
   summary: string;
   summaryEn?: string;
   body?: string[];
+  /** 往期活动的现场图集 */
+  gallery?: ContentImage[];
   capacity?: string;
   price?: string;
   /** 报名链接，未来接入报名系统后替换 */
