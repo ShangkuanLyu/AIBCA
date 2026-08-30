@@ -32,6 +32,11 @@
 - [ ] **新闻**：`data/news.ts` 9 篇均为示例内容（部分基于老站真实活动改写），上线前替换为真实稿件；附件 `href: "#"` 换为真实文件
 - [ ] **活动**：`data/events.ts` 7 场为示例；`registrationUrl` 现指向 /contact，接入真实报名系统后替换
 - [ ] **会员企业**：`data/members.ts`（含老站出现过的真实企业，需获得展示授权）
+- [ ] **商会企业**：`data/enterprises.ts`（资料由各企业提供，见 `docs/商会会长公司简历/`）
+      - **XPWine 简介为秘书处代拟的占位文案**（企业仅确认为李小鹏经营、位于
+        Docklands 的酒类零售店），全文须经企业确认修订，并补充 Logo 与照片
+      - ANG 聚创国际集团、澳醇思慕集团的负责人（商会职务）信息待补充
+      - 金地等企业对原文的个别用字修正见 `data/enterprises.ts` 文件头注释，上线前与企业确认
 - [ ] **合作机构**：`data/partners.ts`（贸促会代表处等表述需商会确认；补充各机构正式 Logo）
 - [ ] **会员年费**：`components/membership/tiers.tsx` 中 `[待定]`
 - [ ] **合作手册**下载链接：`components/business/business-cta.tsx`

@@ -44,7 +44,15 @@ export const site = {
 
 export interface NavItem {
   href: string;
-  key: "home" | "about" | "news" | "events" | "membership" | "business" | "contact";
+  key:
+    | "home"
+    | "about"
+    | "news"
+    | "events"
+    | "membership"
+    | "enterprises"
+    | "business"
+    | "contact";
 }
 
 export const navItems: NavItem[] = [
@@ -53,6 +61,7 @@ export const navItems: NavItem[] = [
   { href: "/news", key: "news" },
   { href: "/events", key: "events" },
   { href: "/membership", key: "membership" },
+  { href: "/enterprises", key: "enterprises" },
   { href: "/business", key: "business" },
   { href: "/contact", key: "contact" },
 ];

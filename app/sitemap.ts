@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { newsArticles } from "@/data/news";
 import { events } from "@/data/events";
+import { enterprisesWithDetail } from "@/data/enterprises";
 import { site } from "@/lib/site";
 
 /* 静态导出（GitHub Pages）需要显式声明该路由为静态 */
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/news",
     "/events",
     "/membership",
+    "/enterprises",
     "/business",
     "/contact",
     "/privacy",
@@ -37,5 +39,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...newsPages, ...eventPages];
+  const enterprisePages = enterprisesWithDetail.map((e) => ({
+    url: `${site.url}/enterprises/${e.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...newsPages, ...eventPages, ...enterprisePages];
 }

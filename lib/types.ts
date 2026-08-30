@@ -157,3 +157,54 @@ export interface BoardMember {
   /** 排序权重，数字越小越靠前 */
   order: number;
 }
+
+/* ------------------------------------------------------------------ */
+/* 商会企业（会长团队企业展示）                                        */
+/* ------------------------------------------------------------------ */
+
+/** 商会企业负责人（商会会长团队 / 理事会成员） */
+export interface EnterpriseLeader {
+  name: string;
+  nameEn?: string;
+  /** 在商会的职务，例如 "常务副会长" */
+  chamberRole?: string;
+  /** 在企业的职务，例如 "执行董事" */
+  companyRole?: string;
+  /** 肖像照 URL */
+  photo?: string;
+  bio?: string;
+}
+
+/** 企业核心团队成员（负责人以外） */
+export interface EnterpriseTeamMember {
+  name: string;
+  /** 在企业的职务，例如 "公司董事" "牧场经理" */
+  role: string;
+  bio?: string;
+}
+
+export interface Enterprise {
+  slug: string;
+  name: string;
+  nameEn?: string;
+  /** 所属行业，例如 "大健康" "农牧业" "酒业" */
+  industry: string;
+  /** 总部 / 所在地 */
+  location?: string;
+  website?: string;
+  /** Logo 图片 URL；暂缺时组件以文字标识占位 */
+  logo?: string;
+  /** 一句话简介（列表卡片与页头描述） */
+  summary: string;
+  /**
+   * 详情正文段落。为空数组表示资料尚未提供：
+   * 列表页不生成详情链接，也不进入 generateStaticParams / sitemap。
+   */
+  body: string[];
+  /** 发展战略 / 重点方向 */
+  strategies?: string[];
+  leader?: EnterpriseLeader;
+  team?: EnterpriseTeamMember[];
+  /** 详情页企业图集 */
+  gallery?: ContentImage[];
+}

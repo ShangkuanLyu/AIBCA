@@ -84,7 +84,8 @@ export function Navbar() {
         </Link>
 
         {/* 桌面端菜单 */}
-        <nav aria-label="主导航" className="hidden items-center gap-6 xl:gap-8 lg:flex">
+        {/* 8 个栏目在 lg（1024px）下空间紧张：收紧间距并禁止条目内折行 */}
+        <nav aria-label="主导航" className="hidden items-center gap-4 xl:gap-7 lg:flex">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -93,7 +94,7 @@ export function Navbar() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "group relative py-1 text-[13.5px] tracking-wide transition-colors",
+                  "group relative whitespace-nowrap py-1 text-[13.5px] tracking-wide transition-colors",
                   active
                     ? solid
                       ? "text-pine-800 font-medium"
