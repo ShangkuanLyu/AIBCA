@@ -50,7 +50,8 @@
 - [ ] 仍为示例的区块与文章配图：搜索 `images.unsplash.com` 逐一替换为商会自有摄影
 - [ ] 替换完成后收紧 `next.config.ts` → `images.remotePatterns`
 - [ ] 澳世汇集团 Logo：老站仅有深蓝底宣传横幅，需向该会员索取标准版 Logo
-- [ ] 理事会成员肖像照（`data/board.ts` 现为占位图）
+- [ ] 理事会成员肖像照（`data/board.ts` 现全部留空、以首字标识展示，商会提供后补充）
+- [ ] 会长寄语肖像（首页与关于页现为空白占位块 `PortraitPlaceholder`，商会提供后换回 `ImageFrame`）
 
 ## 五之二、已从老站迁移的内容（核实即可，无需重写）
 

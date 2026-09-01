@@ -1,6 +1,6 @@
 import { Quote } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
-import { ImageFrame } from "@/components/ui/image-frame";
+import { PortraitPlaceholder } from "@/components/ui/portrait-placeholder";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -13,13 +13,8 @@ export function PresidentMessage() {
     <section className="py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl items-start gap-14 px-5 md:px-8 lg:grid-cols-12 lg:gap-20">
         <Reveal className="lg:col-span-4">
-          <ImageFrame
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
-            alt="商会会长正式商务肖像（占位图）"
-            aspect="aspect-[3/4]"
-            offset="tl"
-            sizes="(min-width: 1024px) 33vw, 100vw"
-          />
+          {/* TODO(上线前)：商会提供会长正式商务肖像后，换回 ImageFrame 展示 */}
+          <PortraitPlaceholder />
         </Reveal>
 
         <div className="lg:col-span-8">

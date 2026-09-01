@@ -25,8 +25,7 @@ export const boardMembers: BoardMember[] = [
     nameEn: "Hao Jiancai",
     role: "会长",
     roleEn: "President",
-    photo:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80",
+    // TODO(上线前)：商会提供正式肖像照后补充 photo；提供前展示首字标识
     bio: "郝建才先生于 2024 年 11 月就任澳大利亚内蒙古商会会长，此前曾任商会名誉会长。就任以来，他提出加强商会自身建设、广泛联系中澳各界、切实做好会员服务的工作方向，带领新一届理事会推进商会各项工作。",
     order: 2,
   },
@@ -36,8 +35,7 @@ export const boardMembers: BoardMember[] = [
     nameEn: "Sun Guozhao",
     role: "执行会长",
     roleEn: "Executive President",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1600&q=80",
+    // TODO(上线前)：商会提供正式肖像照后补充 photo；提供前展示首字标识
     bio: "孙国照先生为澳大利亚内蒙古商会创会会长，2014 年在墨尔本发起成立商会，带领商会发展为会员企业逾百家、覆盖教育、地产、金融、矿产、医疗、大健康等行业的侨界商会组织。2023 年，他组织 15 名会员赴呼和浩特出席世界蒙商大会，并被内蒙古自治区人民政府授予“澳大利亚招商大使”称号。现任商会执行会长。",
     order: 3,
   },
