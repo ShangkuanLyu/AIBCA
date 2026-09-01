@@ -149,6 +149,8 @@ export const enterprises: Enterprise[] = [
     ],
     leader: {
       name: "李小鹏",
+      nameEn: "Li Xiaopeng",
+      chamberRole: "副会长兼副秘书长",
       companyRole: "创始人",
     },
   },

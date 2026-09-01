@@ -152,12 +152,21 @@ export const boardMembers: BoardMember[] = [
     order: 17,
   },
   {
+    // 李小鹏兼任副会长与副秘书长，组件按职务分组展示，故设两条记录
+    id: "li-xiaopeng",
+    name: "李小鹏",
+    nameEn: "Li Xiaopeng",
+    role: "副会长",
+    roleEn: "Vice President",
+    order: 18,
+  },
+  {
     id: "huang-hui",
     name: "黄慧",
     nameEn: "Huang Hui",
     role: "常务理事",
     roleEn: "Executive Director",
-    order: 18,
+    order: 19,
   },
   {
     id: "guo-xin",
@@ -165,7 +174,7 @@ export const boardMembers: BoardMember[] = [
     nameEn: "Guo Xin",
     role: "常务理事",
     roleEn: "Executive Director",
-    order: 19,
+    order: 20,
   },
   {
     id: "rose-chen",
@@ -173,7 +182,7 @@ export const boardMembers: BoardMember[] = [
     nameEn: "Rose Chen",
     role: "常务理事",
     roleEn: "Executive Director",
-    order: 20,
+    order: 21,
   },
   {
     id: "zhuo-na",
@@ -181,6 +190,15 @@ export const boardMembers: BoardMember[] = [
     nameEn: "Zhuona",
     role: "副秘书长",
     roleEn: "Deputy Secretary-General",
-    order: 21,
+    order: 22,
+  },
+  {
+    // 见上：李小鹏的副秘书长职务记录
+    id: "li-xiaopeng-deputy-sg",
+    name: "李小鹏",
+    nameEn: "Li Xiaopeng",
+    role: "副秘书长",
+    roleEn: "Deputy Secretary-General",
+    order: 23,
   },
 ];
