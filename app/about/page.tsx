@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "关于商会",
   description:
     "澳大利亚内蒙古商会成立于 2014 年，总部设于墨尔本，是在澳大利亚注册的非营利性社团组织。了解商会的使命愿景、核心价值、发展历程、理事会成员与组织架构。",
+  alternates: { canonical: "/about" },
 };
 
 /** 关于商会 */

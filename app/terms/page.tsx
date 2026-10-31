@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "网站使用条款",
   description: `${site.nameZh}网站使用条款。`,
+  alternates: { canonical: "/terms" },
 };
 
 /**

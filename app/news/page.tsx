@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "新闻资讯",
   description:
     "澳大利亚内蒙古商会新闻资讯：商会动态、政策资讯、商务资讯、中澳交流、会员新闻与活动回顾，及时了解商会与两地商界的最新进展。",
+  alternates: { canonical: "/news" },
 };
 
 /** 新闻列表页：置顶新闻 + 分类筛选 / 搜索 / 分页列表 + 订阅 CTA */

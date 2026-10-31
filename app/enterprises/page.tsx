@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "商会企业",
   description:
     "澳大利亚内蒙古商会会长团队企业展示：覆盖农牧业、大健康、酒业等行业，呈现商会企业在中澳两地的产业布局与合作机会。",
+  alternates: { canonical: "/enterprises" },
 };
 
 /** 商会企业列表页：会长团队企业名片墙 */

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "商会活动",
   description:
     "澳大利亚内蒙古商会活动一览：商务论坛、商务社交、庆典晚宴、代表团考察与文化交流等活动的最新安排及往期回顾。",
+  alternates: { canonical: "/events" },
 };
 
 /** 活动列表页：即将举行 / 往期活动 + 活动类型筛选 */

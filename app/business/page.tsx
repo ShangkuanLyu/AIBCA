@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "商务合作",
   description:
     "澳大利亚内蒙古商会商务合作：介绍内蒙古重点产业投资机会、商会的企业合作促成服务与项目对接流程，汇集两地市场资讯，欢迎企业发布投资、采购与合作需求。",
+  alternates: { canonical: "/business" },
 };
 
 /** 商务合作页 */

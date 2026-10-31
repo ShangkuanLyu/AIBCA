@@ -14,6 +14,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: `${site.nameZh} | ${site.nameEn}` },
   description: `${site.tagline}。${site.description}`,
+  alternates: { canonical: "/" },
 };
 
 /** 首页 */

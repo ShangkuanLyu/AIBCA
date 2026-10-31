@@ -15,8 +15,11 @@ export const site = {
     "澳大利亚内蒙古商会致力于搭建澳大利亚与内蒙古之间的经贸、文化及社会交流平台，为会员企业提供资源对接、市场资讯、商务合作与公共关系支持。",
   descriptionEn:
     "The Australian Inner Mongolia Chamber of Commerce builds bridges for trade, culture and community between Australia and Inner Mongolia, supporting members with connections, market insight and business opportunities.",
-  /** 正式域名确认后替换（用于 metadata / sitemap / JSON-LD） */
-  url: "https://www.aibca.com.au",
+  /**
+   * 正式域名（用于 metadataBase / canonical / sitemap / JSON-LD / 分享链接）。
+   * 须与 Vercel Domains 中的主域名（不跳转的那个）一致：www 为主，aibca.org.au 308 跳转到 www。
+   */
+  url: "https://www.aibca.org.au",
 
   contact: {
     // 以下信息沿用商会现有公开信息，上线前请再次核实

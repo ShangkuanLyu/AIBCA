@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "联系我们",
   description:
     "欢迎与澳大利亚内蒙古商会取得联系。您可以通过在线表单、邮箱或电话咨询商务合作、媒体合作及入会事宜，商会秘书处将尽快回复。",
+  alternates: { canonical: "/contact" },
 };
 
 /** 分类联系方式（占位邮箱，上线前替换） */
