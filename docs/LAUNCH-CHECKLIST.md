@@ -71,6 +71,8 @@
 
 ## 七、部署
 
-- [ ] 平台建议 Vercel（零配置）；或任意支持 Node 的主机 `npm run build && npm start`
-- [ ] 配置正式域名 + HTTPS（老站证书已失效，新站务必配好）
-- [ ] 上线后用 Google Search Console 提交 `/sitemap.xml`
+- [x] 部署到 Vercel（项目 `aibca_org`，推 main 自动发布；不要设置 `GITHUB_PAGES` 环境变量）
+- [x] 正式域名 `www.aibca.org.au` + HTTPS（`aibca.org.au` 308 跳转到 www）。DNS 在 GoDaddy，
+      只改过 `@` 的 A 记录和 `www` 的 CNAME；MX / TXT / autodiscover / DKIM 等是商会 M365 邮箱的记录，切勿改动，也不要改 Nameserver
+- [ ] 内容就绪后把 `lib/site.ts` → `indexable` 改为 `true`（现为 false，全站 noindex），再用 Google Search Console 提交 `/sitemap.xml`
+- [ ] 正式站验收后停用 GitHub Pages 部署（`.github/workflows/deploy.yml` 与仓库 Settings → Pages）

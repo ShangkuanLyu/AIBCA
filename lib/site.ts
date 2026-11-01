@@ -20,6 +20,11 @@ export const site = {
    * 须与 Vercel Domains 中的主域名（不跳转的那个）一致：www 为主，aibca.org.au 308 跳转到 www。
    */
   url: "https://www.aibca.org.au",
+  /**
+   * 是否允许搜索引擎收录。false 时全站输出 noindex, nofollow，robots.txt 不再声明 sitemap。
+   * 示例内容清理完、联系邮箱换成新域名后改为 true，再到 Google Search Console 提交 sitemap。
+   */
+  indexable: false,
 
   contact: {
     // 以下信息沿用商会现有公开信息，上线前请再次核实

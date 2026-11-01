@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: `${site.nameZh} | ${site.nameEn}`,
     description: site.description,
   },
-  robots: { index: true, follow: true },
+  robots: { index: site.indexable, follow: site.indexable },
 };
 
 /** 结构化数据：机构信息（SEO） */

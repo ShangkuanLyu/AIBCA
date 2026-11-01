@@ -6,7 +6,8 @@ export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
+    // 未开放收录时也保持 allow：爬虫要能抓到页面才读得到 noindex
     rules: { userAgent: "*", allow: "/" },
-    sitemap: `${site.url}/sitemap.xml`,
+    sitemap: site.indexable ? `${site.url}/sitemap.xml` : undefined,
   };
 }
