@@ -34,6 +34,30 @@ export interface ContentImage {
   caption?: string;
 }
 
+/**
+ * 正文块（简化的富文本，未来由 CMS 富文本替换）。
+ * 纯字符串即普通段落；长篇报道可穿插小标题、正文配图、列表与人员名单。
+ */
+export type ArticleBlock =
+  | string
+  | {
+      type: "heading";
+      text: string;
+      /** 小标题上方的眉题，例如 "01 · 9 月 14 日—16 日" */
+      eyebrow?: string;
+    }
+  | {
+      type: "figure";
+      /** 正文配图需给出原图像素尺寸，以按原始比例展示、不裁切 */
+      image: ContentImage & { width: number; height: number };
+    }
+  | { type: "list"; items: string[]; ordered?: boolean }
+  | {
+      type: "roster";
+      title?: string;
+      members: { name: string; role: string }[];
+    };
+
 export interface NewsArticle {
   slug: string;
   category: NewsCategory;
@@ -54,8 +78,8 @@ export interface NewsArticle {
   featured?: boolean;
   /** 新闻列表置顶 */
   pinned?: boolean;
-  /** 正文段落（简化的富文本，未来由 CMS 富文本替换） */
-  body: string[];
+  /** 正文（段落为主，可穿插小标题、配图、列表，见 ArticleBlock） */
+  body: ArticleBlock[];
   /** 活动图集：正文之后以网格形式展示的现场照片 */
   gallery?: ContentImage[];
   attachments?: NewsAttachment[];

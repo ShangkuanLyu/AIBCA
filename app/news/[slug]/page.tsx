@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, FileDown } from "lucide-react";
 import { NEWS_TONES, NewsCard } from "@/components/cards/news-card";
 import { MeanderStrip } from "@/components/decor/meander-strip";
+import { ArticleBody } from "@/components/news/article-body";
 import { ShareButtons } from "@/components/news/share-buttons";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -128,11 +129,10 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           </Reveal>
 
           {/* 正文（阅读宽度，宽松行距） */}
-          <div className="mx-auto mt-12 max-w-3xl space-y-6 text-[15px] leading-loose text-ink md:mt-14 md:text-base">
-            {article.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
+          <ArticleBody
+            blocks={article.body}
+            className="mx-auto mt-12 max-w-3xl md:mt-14"
+          />
 
           {/* 活动图集（现场照片） */}
           {article.gallery && article.gallery.length > 0 && (
