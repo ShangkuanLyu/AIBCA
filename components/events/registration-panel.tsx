@@ -4,7 +4,8 @@ import type { ChamberEvent } from "@/lib/types";
 /**
  * 活动详情 · 报名区块。
  * 按活动状态展示不同引导：
- * open — 立即报名；full — 候补登记；upcoming — 报名即将开放；past — 已结束。
+ * open — 立即报名；full — 候补登记；upcoming — 报名即将开放；
+ * past — 已结束（有 recapSlug 时直接链接到对应报道，否则链接到新闻列表）。
  */
 export function RegistrationPanel({ event }: { event: ChamberEvent }) {
   // TODO(上线前)：registrationUrl 目前为占位链接（指向 /contact），
@@ -77,11 +78,17 @@ export function RegistrationPanel({ event }: { event: ChamberEvent }) {
             本场活动已结束
           </p>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-soft">
-            感谢各界嘉宾与会员的支持与参与。活动回顾及相关报道，请见商会新闻栏目。
+            {event.recapSlug
+              ? "感谢各界嘉宾与会员的支持与参与。本场活动的完整报道已在商会新闻栏目发布。"
+              : "感谢各界嘉宾与会员的支持与参与。活动回顾及相关报道，请见商会新闻栏目。"}
           </p>
           <div className="mt-7">
-            <ButtonLink href="/news" variant="outline" withArrow>
-              查看活动回顾
+            <ButtonLink
+              href={event.recapSlug ? `/news/${event.recapSlug}` : "/news"}
+              variant="outline"
+              withArrow
+            >
+              {event.recapSlug ? "阅读活动报道" : "查看活动回顾"}
             </ButtonLink>
           </div>
         </>

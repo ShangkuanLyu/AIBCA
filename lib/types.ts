@@ -124,6 +124,8 @@ export interface ChamberEvent {
   body?: string[];
   /** 往期活动的现场图集 */
   gallery?: ContentImage[];
+  /** 往期活动对应的新闻报道 slug；设置后「活动回顾」按钮直接链接到该报道 */
+  recapSlug?: string;
   capacity?: string;
   price?: string;
   /** 报名链接，未来接入报名系统后替换 */

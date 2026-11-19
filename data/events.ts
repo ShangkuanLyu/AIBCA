@@ -10,9 +10,12 @@
  *    —— 含：2024 十周年庆典晚宴、2022 年度鸡尾酒会、
  *       2018 鄂尔多斯友好商会签约、2016 中国包头—澳大利亚经贸合作洽谈会、
  *       2018 年度理事会。
+ *    —— 另有 2026 内蒙古商务考察代表团（9 月 14–18 日），内容与图片整理自
+ *       本站同名新闻报道（据“澳大利亚大华时代”公众号报道整理）。
+ *    —— 有对应新闻报道的往期活动以 recapSlug 关联，详情页可直接跳转。
  *
  * 2) 示例活动（example content）
- *    —— 全部 2026 年未来活动，以及「世界蒙商大会代表团」一条，
+ *    —— 其余 2026 年未来活动，以及「世界蒙商大会代表团」一条，
  *       日期、场地、票价、名额、报名链接与配图（Unsplash 占位图）均为示例，
  *       上线前须逐条替换或核实。
  *
@@ -23,7 +26,7 @@ import type { ChamberEvent } from "@/lib/types";
 
 export const events: ChamberEvent[] = [
   /* ---------------------------------------------------------------- */
-  /* 未来活动 —— 以下 4 条均为示例数据（example content）              */
+  /* 未来活动 —— 以下 3 条均为示例数据（example content）              */
   /* 日期、场地、票价、名额、报名链接与配图均为占位内容，上线前须替换 */
   /* ---------------------------------------------------------------- */
   {
@@ -85,32 +88,6 @@ export const events: ChamberEvent[] = [
   },
   {
     // 示例活动（example content）
-    slug: "2026-inner-mongolia-delegation",
-    title: "内蒙古投资考察代表团",
-    titleEn: "Investment Delegation to Inner Mongolia",
-    category: "delegation",
-    status: "upcoming",
-    date: "2026-10-19",
-    endDate: "2026-10-26",
-    location: "中国·呼和浩特 / 包头 / 鄂尔多斯",
-    coverImage:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
-    coverAlt: "草原地平线（占位图）",
-    summary:
-      "商会拟组织会员企业赴内蒙古开展为期一周的投资考察，走访重点园区与龙头企业，对接当地经贸合作资源。",
-    summaryEn:
-      "A one-week delegation to Inner Mongolia visiting key industrial parks and leading enterprises to explore trade and investment opportunities.",
-    body: [
-      "澳大利亚内蒙古商会拟于 2026 年 10 月组织会员企业赴内蒙古自治区开展投资考察，行程涵盖呼和浩特、包头、鄂尔多斯等地，为期约一周。",
-      "考察内容包括：走访当地重点产业园区与龙头企业，与各地贸促会及相关部门座谈，围绕农牧产品加工、矿产与能源、教育与文旅等领域对接合作资源。呼和浩特市、包头市、鄂尔多斯市贸促会代表处均设于本商会，将协助安排相关对接活动。",
-      "本次考察面向商会会员企业开放，名额有限。具体行程、费用及报名办法将由秘书处另行通知，有意参加的会员可先行与秘书处联系登记意向。",
-      "商会自成立以来持续组织会员参与内蒙古与澳大利亚之间的双向考察与经贸活动，包括 2023 年组织 15 名会员参加在呼和浩特举办的世界蒙商大会。欢迎会员企业把握机会，实地了解家乡产业发展。",
-    ],
-    capacity: "20 家会员企业",
-    price: "费用及报名办法另行通知",
-  },
-  {
-    // 示例活动（example content）
     slug: "2026-annual-gala",
     title: "2026 年度晚宴",
     titleEn: "2026 Annual Gala Dinner",
@@ -141,6 +118,76 @@ export const events: ChamberEvent[] = [
   /* 往期活动                                                          */
   /* ---------------------------------------------------------------- */
   {
+    /* 真实活动 —— 内容与图片整理自本站新闻
+       inner-mongolia-business-delegation-2026（据“澳大利亚大华时代”公众号
+       报道，已按商会视角调整措辞）；原为同 slug 的示例活动
+       “内蒙古投资考察代表团”（10 月 19–26 日），按实际行程改写。 */
+    slug: "2026-inner-mongolia-delegation",
+    title: "2026 内蒙古商务考察代表团",
+    titleEn: "2026 Business Delegation to Ordos and Hohhot",
+    category: "delegation",
+    status: "past",
+    recapSlug: "inner-mongolia-business-delegation-2026",
+    date: "2026-09-14",
+    endDate: "2026-09-18",
+    location: "中国 · 鄂尔多斯 / 呼和浩特",
+    coverImage: "/images/news/im-delegation-2026-00.jpg",
+    coverAlt:
+      "鄂尔多斯经贸文化交流座谈会会场，联合代表团成员与当地嘉宾在背景屏前合影",
+    summary:
+      "商会会长郝建才率商会与大洋洲工商业委员会联合代表团走访鄂尔多斯、呼和浩特十余处企业与园区，并与内蒙古女企业家商会签署友好合作备忘录。",
+    summaryEn:
+      "AIMCC President Hao Jiancai led a five-day joint delegation to Ordos and Hohhot, visiting more than ten companies and industrial parks and signing a cooperation MoU with the Inner Mongolia Women Entrepreneurs Chamber of Commerce.",
+    body: [
+      "2026 年 9 月 14 日至 18 日，澳大利亚内蒙古商会会长郝建才率商会与大洋洲工商业委员会联合代表团，赴内蒙古自治区鄂尔多斯市、呼和浩特市开展中澳商务考察。代表团成员来自农业、畜牧育种、绿色能源、金融、会计、法律、文化艺术等领域，五天行程中先后走访城市建设、羊绒纺织、新能源、现代农牧业、生物科技等领域的十余处考察点，出席多场政企座谈。",
+      "鄂尔多斯段（9 月 14 日—16 日），代表团参观城市规划展览馆与伊金霍洛旗文化产业园，出席经贸文化交流座谈会，考察鄂尔多斯集团现代羊绒产业园、双绮羊绒制品有限公司、华容商厦等羊绒产业链企业，以及蒙苏经济开发区零碳产业园的隆基绿能光伏项目、远景现代化能源装备产业园和乌兰集团牧场。座谈会上，鄂尔多斯市贸促会（侨联）与大洋洲工商业委员会签署合作备忘录。",
+      "呼和浩特段（9 月 17 日—18 日），代表团参访内蒙古天皓集团与内蒙古优质农畜产品展销中心，出席在自治区农牧厅召开的落实《携手推进内蒙古绿色农畜产品出海销售战略合作协议》座谈洽谈会，并考察海日瀚生物科技有限公司、阿勒坦农业公司，与北京卫蓝公司内蒙古分公司就户外储能出海座谈。9 月 18 日下午，内蒙古女企业家商会会长樊小平分别与商会会长郝建才、大洋洲工商业委员会理事会主席 Bruce Atkinson 签署友好合作备忘录。",
+      "代表团表示，将围绕绿色农畜产品出海、羊绒与纺织品、新能源与储能、畜牧良种与现代农业、专业服务五个方向推动项目对接，并建立专人对接机制、定期通报进展。完整报道及代表团名单请见商会新闻。",
+    ],
+    gallery: [
+      {
+        src: "/images/news/im-delegation-2026-02.jpg",
+        alt: "鄂尔多斯经贸文化交流座谈会会场全景",
+        caption: "9 月 14 日，鄂尔多斯经贸文化交流座谈会现场",
+      },
+      {
+        src: "/images/news/im-delegation-2026-03.jpg",
+        alt: "座谈会背景屏前，鄂尔多斯市贸促会负责人与 Bruce Atkinson 手持合作备忘录合影",
+        caption: "鄂尔多斯市贸促会（侨联）与大洋洲工商业委员会签署合作备忘录",
+      },
+      {
+        src: "/images/news/im-delegation-2026-05.jpg",
+        alt: "代表团成员在羊绒成衣车间观看工人整理羊绒衫",
+        caption: "代表团在鄂尔多斯集团现代羊绒产业园考察",
+      },
+      {
+        src: "/images/news/im-delegation-2026-07.jpg",
+        alt: "代表团成员在隆基绿能展厅听取讲解",
+        caption: "代表团在隆基绿能展厅了解光伏产品与技术",
+      },
+      {
+        src: "/images/news/im-delegation-2026-08.jpg",
+        alt: "代表团在“鄂尔多斯 温暖全世界”标语墙前合影",
+        caption: "代表团圆满完成鄂尔多斯段行程留影",
+      },
+      {
+        src: "/images/news/im-delegation-2026-10.jpg",
+        alt: "自治区农牧厅、侨联负责人陪同代表团成员在展销中心参观",
+        caption: "代表团参观内蒙古优质农畜产品展销中心",
+      },
+      {
+        src: "/images/news/im-delegation-2026-12.jpg",
+        alt: "自治区农牧厅会议室内，座谈洽谈会双方代表围坐长桌",
+        caption: "9 月 17 日，座谈洽谈会在自治区农牧厅召开",
+      },
+      {
+        src: "/images/news/im-delegation-2026-20.jpg",
+        alt: "樊小平与郝建才手持红色签约文本握手",
+        caption: "内蒙古女企业家商会会长樊小平与商会会长郝建才签署友好合作备忘录",
+      },
+    ],
+  },
+  {
     /* 真实活动 —— 内容与图片整理自老站文章 1339（活动回顾）
        及 1225（活动邀请函，仅采用其中的公开活动信息）。 */
     slug: "2024-10th-anniversary-gala",
@@ -148,6 +195,7 @@ export const events: ChamberEvent[] = [
     titleEn: "10th Anniversary Gala Dinner",
     category: "gala",
     status: "past",
+    recapSlug: "10th-anniversary-gala-recap",
     date: "2024-11-28",
     time: "15:30 商务对接酒会 · 18:00 庆典晚宴",
     location: "199 Sunshine Rd, Tottenham, VIC 3012",
@@ -243,6 +291,7 @@ export const events: ChamberEvent[] = [
     titleEn: "2022 Annual Cocktail Reception",
     category: "networking",
     status: "past",
+    recapSlug: "2022-mid-autumn-cocktail-recap",
     date: "2022-09-18",
     location: "澳大利亚墨尔本",
     coverImage: "/images/news/1231-00.jpg",
@@ -303,6 +352,7 @@ export const events: ChamberEvent[] = [
     titleEn: "2018 Annual Council Meeting",
     category: "networking",
     status: "past",
+    recapSlug: "annual-council-meeting-2018",
     date: "2018-12-16",
     location: "澳大利亚 · 墨尔本",
     coverImage: "/images/news/925-00.jpg",
@@ -334,6 +384,7 @@ export const events: ChamberEvent[] = [
     titleEn: "Sister Chamber Signing Ceremony with the Ordos Chamber of Commerce",
     category: "delegation",
     status: "past",
+    recapSlug: "ordos-chamber-friendship-agreement",
     // TODO: 年份为推断值（老站原文未注明年份），须向商会核实后确认
     date: "2018-03-31",
     location: "中国 · 鄂尔多斯",
@@ -392,6 +443,7 @@ export const events: ChamberEvent[] = [
       "2016 China Baotou City – Trade & Investment Cooperation Seminar in Australia",
     category: "forum",
     status: "past",
+    recapSlug: "baotou-delegation-trade-seminar-2016",
     date: "2016-11-07",
     location: "澳大利亚 · 墨尔本",
     venue: "维多利亚州议会大厦（Parliament House）",
